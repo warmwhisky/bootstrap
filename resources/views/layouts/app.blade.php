@@ -7,6 +7,9 @@
     <title>@yield('title')</title>
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link rel="stylesheet" href="/css/brands.min.css">
+    <link rel="stylesheet" href="/css/solid.min.css">
     <style>
         .table td, .table th {
             padding: 1px;
@@ -20,7 +23,7 @@
 
     @yield('content')
 
-    @include("includes.sidebar")
+{{--    @include("includes.sidebar")--}}
 
 </div>
 

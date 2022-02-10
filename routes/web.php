@@ -19,3 +19,9 @@ Route::get('/', function () {
 
 Route::get('/about', '\App\Http\Controllers\PagesController@about');
 Route::get('/contact', '\App\Http\Controllers\PagesController@contact');
+Route::post('/contact/post', '\App\Http\Controllers\PagesController@contactPost');
+Route::get('/registration', '\App\Http\Controllers\PagesController@registration');
+Route::get('/report', '\App\Http\Controllers\PagesController@report');
+Route::post('/report/delete/{email_id}', '\App\Http\Controllers\PagesController@deleteEmail');
+Route::get('/report/edit/{email_id}', '\App\Http\Controllers\PagesController@editEmail');
+Route::post('/contact/edit/post', '\App\Http\Controllers\PagesController@editEmailPost');
