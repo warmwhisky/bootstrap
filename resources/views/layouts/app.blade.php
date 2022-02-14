@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/all.min.css">
     <link rel="stylesheet" href="/css/brands.min.css">
     <link rel="stylesheet" href="/css/solid.min.css">
+    <link rel="stylesheet" href="/css/style.css">
     <style>
         .table td, .table th {
             padding: 1px;

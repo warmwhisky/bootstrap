@@ -11,7 +11,7 @@
         <div class="col-md-10">
             <br>
             <h1>WELCOME TO MY WORLD</h1>
-
+            {{Request::input('something')}}
 
 
         </div>

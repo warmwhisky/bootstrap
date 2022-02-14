@@ -30,5 +30,6 @@ Route::post('/registration/post', '\App\Http\Controllers\UsersController@registr
 Route::get('/registry_report', '\App\Http\Controllers\UsersController@registry_report');
 Route::post('/edit_registry_report/delete/{user_id}', '\App\Http\Controllers\UsersController@deleteUsers');
 Route::get('/edit_registry_report/edit/{user_id}', '\App\Http\Controllers\UsersController@editUsers');
+Route::get('/products', '\App\Http\Controllers\SearchController@products');
 
 

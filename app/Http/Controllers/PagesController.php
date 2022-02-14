@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Redirect;
 
 class PagesController extends Controller
 {
-    public static function about() {
+    public static function about(Request $request) {
 
         return view('about');
     }
