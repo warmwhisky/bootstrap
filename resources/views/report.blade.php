@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Home
+    Report
 @endsection
 
 @section('content')
@@ -18,8 +18,7 @@
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>
                     <th scope="col">Message</th>
-                    <th></th>
-                    <th></th>
+
                 </tr>
                 </thead>
                 <tbody>
