@@ -13,10 +13,28 @@ class SearchController extends Controller
 
     public static function products(Request $request) {
 
-        $products = Products::where('shop',1)->get();
+        $animal_types = Products::select('animal_type')
+            ->where('shop',1)
+            ->where('animal_type', '!=', '')
+            ->groupBy('animal_type')
+            ->get();
 
-        return view('products',compact('products'));
+        if($request->input('filter')) {
+            $products = Products::where('shop',1)
+                ->where('animal_type', $request->input('filter'))
+                ->get();
+        } else {
+            $products = Products::where('shop',1)->get();
+        }
+
+        return view('products',compact('products','animal_types'));
+
+
+
     }
 
 
-}
+
+
+
+    }

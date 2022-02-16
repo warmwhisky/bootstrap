@@ -54,7 +54,6 @@
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputState">State</label>
-
                         <select class="custom-select mr-sm-2" name="state" id="inlineFormCustomSelect">
                             <option selected value="" disabled>Choose...</option>
                             <option value="Florida">Florida</option>

@@ -1,17 +1,30 @@
 .product_wrapper {
-    border: 5px solid black;
-    margin: 5px;
+    border: 2px solid black;
+    margin: 2px;
 }
 .product_wrapper img {
+    position: center;
     width: 100px;
     height: 100px;
 }
 .code {
     text-align: center;
     font-size: 9px;
-    font-weight: bold;
+    font-weight: normal;
 }
-body{
-background: silver;
-    color:darkred;
+body {
+    background-color: #fefbd8;
 }
+
+h1 {
+    background-color: #80ced6;
+}
+
+div {
+    background-color: #d5f4e6;
+}
+
+span {
+    background-color: #f18973;
+}
+

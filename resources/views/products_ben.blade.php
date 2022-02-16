@@ -17,13 +17,14 @@
             <div class="d-flex justify-content-center flex-wrap">
                 @foreach($products as $product)
                     <div class="product_wrapper">
-                        <img src="/images/products/300/{{$product->code}}.jpg">
+                        <img src="/images/products/300/{{$product->code}}/{{$product->code}}.jpg">
                         <div class="code">
                             {{$product->code}}
+
                         </div>
                     </div>
-                @endforeach
             </div>
+                @endforeach
         </div>
     </div>
 
