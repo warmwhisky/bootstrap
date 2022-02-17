@@ -79,7 +79,7 @@
 
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <button class="btn"><i class="fa fa-sign-in" style="font-size: 20px;color: blue">Sign in</i></button>
 
             </form>
 

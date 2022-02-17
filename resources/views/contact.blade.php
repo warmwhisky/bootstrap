@@ -8,6 +8,7 @@
 
         <div class="col-md-10">
             <h1>Contact</h1>
+
             <form action="/contact/post" method="POST">
                 @csrf
                 <div class="form-group">
@@ -25,10 +26,13 @@
                     <textarea class="form-control" name="message" id="exampleFormControlTextarea1" required></textarea>
                 </div>
 
+
+
                    <button type="submit" class="btn btn-primary">
                        Submit
-                   </button>
+                <button class="btn"><i class="fa fa-close" style="font-size: 60px;color: green"></i> </button>
 
+                </button>
             </form>
         </div>
 @endsection

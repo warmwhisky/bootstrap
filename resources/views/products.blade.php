@@ -13,21 +13,28 @@
             <div class=”Header”><br>
                 <h3 class=”Heading”>PRODUCTS</h3>
 
-
-                @foreach($animal_types as $animal_type)
-                    <a href="/products?filter={{$animal_type->animal_type}}"
-                       class="mr-4">{{$animal_type->animal_type}}</a>
-                @endforeach
-
                 <div class="form-group col-md-2 mb-4">
-                    <label for="inputState"></label>
-                    <select class="custom-select mr-sm-2" name="state" id="inlineFormCustomSelect">
+                    <label for="inputState">Animals</label>
+                    <select class="custom-select mr-sm-2" name="state" id="animals_redirect">
                         @foreach($animal_types as $animal_type)
-                            <option selected value="{{$animal_type->animal_type}}">{{$animal_type->animal_type}}s
+                            <option selected value="/products?filter_animals={{$animal_type->animal_type}}">{{$animal_type->animal_type}}
                             </option>
                         @endforeach
                     </select>
                 </div>
+
+                <div class="form-group col-md-2 mb-4">
+                    <label for="inputState">Glasses</label>
+                    <select class="custom-select mr-sm-2" name="state" id="glasses_redirect">
+                        @foreach($glass_type as $glass_type_1)
+                            <option selected value="/products?filter_glasses={{$glass_type_1->glass_type_1}}"> {{$glass_type_1->glass_type_1}}
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
+
+
+
                 <div class="d-flex justify-content-center flex-wrap">
                     @foreach($products as $product)
                         <div class="product_wrapper">
@@ -40,8 +47,7 @@
                                     <br>
                                     @csrf
                                     {{$product->mother_cat_1}}
-                                    <br>
-                                    {{$product->prod_desc}}
+
                                     <br>
                                     {{$product->volume}}
 
@@ -53,6 +59,35 @@
                 </div>
             </div>
         </div>
+@endsection
+@section('jscript')
+    <script>
+        // redirect to animals
+        $(function () {
+            // bind change event to select
+            $('#animals_redirect').on('change', function () {
+                var url = $(this).val(); // get selected value
+                if (url) { // require a URL
+                    window.location = url; // redirect
+                }
+                return false;
+            });
+        });
+
+
+        // redirect to glasses
+        $(function () {
+            // bind change event to select
+            $('#glasses_redirect').on('change', function () {
+                var url = $(this).val(); // get selected value
+                if (url) { // require a URL
+                    window.location = url; // redirect
+                }
+                return false;
+            });
+        });
+
+    </script>
 
 @endsection
 

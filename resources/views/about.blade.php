@@ -8,39 +8,27 @@
 
 
     <div class="row">
-        <div class="col-md-10">
+        <div class="col-md-12">
             <h1>About</h1>
+            <body>
 
-            <table class="table">
-                <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-                </tbody>
+<p> This page displays font-awesome buttons</p>
+            <div class="container-fluid">
+
+                <button class="btn"><i class="fa fa-home" style="font-size: 60px;color: black"></i> Home</button>
+                <button class="btn"><i class="fa fa-bars" style="font-size: 60px;color: blue"></i> Bars</button>
+                <button class="btn"><i class="fa fa-trash" style="font-size: 60px;color: darkred"></i> Trash</button>
+                <button class="btn"><i class="fa fa-close" style="font-size: 60px;color: red"></i> Close</button>
+                <button class="btn"><i class="fa fa-folder" style="font-size: 60px;color: purple"></i> Folder</button>
+                <button class="btn"><i class="fa fa-face-angry" style="font-size: 60px;color: red"></i> Face</button>
+                <button class="btn"><i class="fa fa-sign-in" style="font-size: 60px;color: red"></i> sign</button>
+
+
+
+
+            </div>
+                </body>
             </table>
 
-        </div>
+        </>
 @endsection

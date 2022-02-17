@@ -20,4 +20,6 @@ class ProductService
             ->where('animal_type', $animal_type)
             ->get();
     }
+
+
 }
