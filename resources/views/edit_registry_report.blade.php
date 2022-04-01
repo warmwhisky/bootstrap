@@ -10,7 +10,7 @@
         <h1>registry_report</h1>
         <form action="/registry_report/edit/post" method="POST">
             @csrf
-            <input type="hidden" email="users_id" value="{{$user->id}}">
+            <input type="hidden" name="users_id" value="{{$user->id}}">
             <div class="form-group">
                 <label for="exampleInputEmail1">Email</label>
                 <input type="text" value="{{$user->email}}" name="email" class="form-control" id="text"
@@ -65,8 +65,6 @@
                         @endforeach
                     </select>
 
-                    <option></option>
-                    </select>
                 </div>
                 <div class="form-group col-md-2">
                     <label for="inputZip">Zip</label>
@@ -87,6 +85,5 @@
             </button>
         </form>
     </div>
-
 
 @endsection

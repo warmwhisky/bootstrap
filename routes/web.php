@@ -18,7 +18,10 @@ Route::get('/', function () {
 });
 
 Route::get('/about', '\App\Http\Controllers\PagesController@about');
+Route::post('/about/post', '\App\Http\Controllers\PagesController@aboutPost');
 Route::get('/contact', '\App\Http\Controllers\PagesController@contact');
+Route::get('/animals', '\App\Http\Controllers\SearchController@animals');
+Route::get('/glass', '\App\Http\Controllers\SearchController@glass');
 Route::post('/contact/post', '\App\Http\Controllers\PagesController@contactPost');
 Route::get('/registration', '\App\Http\Controllers\PagesController@registration');
 Route::get('/report', '\App\Http\Controllers\PagesController@report');
@@ -31,5 +34,10 @@ Route::get('/registry_report', '\App\Http\Controllers\UsersController@registry_r
 Route::post('/edit_registry_report/delete/{user_id}', '\App\Http\Controllers\UsersController@deleteUsers');
 Route::get('/edit_registry_report/edit/{user_id}', '\App\Http\Controllers\UsersController@editUsers');
 Route::get('/products', '\App\Http\Controllers\SearchController@products');
+Route::get('/product', '\App\Http\Controllers\SearchController@product');
+
+
+
+
 
 

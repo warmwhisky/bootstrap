@@ -43,19 +43,21 @@ class UsersController extends Controller
 
 
        $new_registration = new Users();
+        $new_registration->id = $request->input('id');
+        $new_registration->name = $request->input('name');
         $new_registration->email = $request->input('email');
         $new_registration->password = $request->input('password');
-        $new_registration->address = $request->input('address');
-        $new_registration->occupation = $request->input('occupation');
-        $new_registration->gender = $request->input('gender');
-        $new_registration->city = $request->input('city');
-        $new_registration->state = $request->input('state');
-        $new_registration->zip = $request->input('zip');
-        $new_registration->check = $request->input('check');
+//        $new_registration->address = $request->input('address');
+//        $new_registration->occupation = $request->input('occupation');
+//        $new_registration->gender = $request->input('gender');
+//        $new_registration->city = $request->input('city');
+//        $new_registration->state = $request->input('state');
+//        $new_registration->zip = $request->input('zip');
+//        $new_registration->check = $request->input('check');
 
         $new_registration->save();
 
-        return Redirect::to('/');
+        return Redirect::to('/registry_report');
 
     }
 
@@ -63,15 +65,17 @@ class UsersController extends Controller
 
         Users::where('id', $request->input('user_id'))
             ->update([
+                "id" => $request->input('id'),
+                "name" => $request->input('name'),
                 "email" => $request->input('email'),
                 "password" => $request->input('password'),
-                "address" => $request->input('address'),
-                "occupation" => $request->input('occupation'),
-                "gender" => $request->input('gender'),
-                "city" => $request->input('city'),
-                "state" => $request->input('state'),
-                "zip" => $request->input('zip'),
-                "check" => $request->input('check'),
+//                "address" => $request->input('address'),
+//                "occupation" => $request->input('occupation'),
+//                "gender" => $request->input('gender'),
+//                "city" => $request->input('city'),
+//                "state" => $request->input('state'),
+//                "zip" => $request->input('zip'),
+//                "check" => $request->input('check'),
             ]);
 
         return Redirect::to('/registration');

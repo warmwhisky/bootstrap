@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Models\Product;
 use App\Models\Products;
 
 class ProductService
@@ -19,6 +20,10 @@ class ProductService
         return Products::where('shop',1)
             ->where('animal_type', $animal_type)
             ->get();
+    }
+
+    public static function getProduct($code) {
+        return Product::where('code', $code)->first();
     }
 
 

@@ -11,21 +11,33 @@
     <link rel="stylesheet" href="/css/brands.min.css">
     <link rel="stylesheet" href="/css/solid.min.css">
     <link rel="stylesheet" href="/css/style.css">
+
     <style>
         .table td, .table th {
-            padding: 1px;
+            padding: 10px;
+
         }
     </style>
 </head>
 <body>
 <div class="container">
+    <div class="col-md-12">
 
-    @include("includes.nav")
+        @include("includes.nav")
 
-    @yield('content')
+        @yield('content')
 
-{{--    @include("includes.sidebar")--}}
+        {{--    @include("includes.sidebar")--}}
 
+    </div>
+</div>
+
+<div class="container">
+    <div class="col-md-12">
+        <div class="mt-5">
+            @include("includes.footer")
+        </div>
+    </div>
 </div>
 
 

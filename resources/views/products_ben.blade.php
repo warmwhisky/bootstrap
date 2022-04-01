@@ -1,11 +1,10 @@
 @extends('layouts.app')
 
 @section('title')
-    Home
+    Products
 @endsection
 
 @section('content')
-
 
     <div class="row">
         <div class="col-md-12">
@@ -20,11 +19,10 @@
                         <img src="/images/products/300/{{$product->code}}/{{$product->code}}.jpg">
                         <div class="code">
                             {{$product->code}}
-
                         </div>
                     </div>
             </div>
-                @endforeach
+            @endforeach
         </div>
     </div>
 

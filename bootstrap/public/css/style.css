@@ -1,0 +1,17 @@
+.product_wrapper {
+    border: 5px solid black;
+    margin: 5px;
+}
+.product_wrapper img {
+    width: 100px;
+    height: 100px;
+}
+.code {
+    text-align: center;
+    font-size: 9px;
+    font-weight: bold;
+}
+body{
+background: silver;
+    color:darkred;
+}

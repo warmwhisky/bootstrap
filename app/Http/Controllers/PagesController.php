@@ -10,6 +10,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
+use phpDocumentor\Reflection\DocBlock\Tags\Return_;
 
 class PagesController extends Controller
 {
@@ -17,6 +18,7 @@ class PagesController extends Controller
 
         return view('about');
     }
+
 
     public static function contact() {
 
@@ -31,7 +33,7 @@ class PagesController extends Controller
         $new_contact->message = $request->input('message');
         $new_contact->save(); //saving to database
 
-        return Redirect::to('/');
+        return Redirect::to('/report');
 
     }
 
@@ -73,6 +75,7 @@ class PagesController extends Controller
 
         return Redirect::to('/report');
     }
+
 
 }
 
